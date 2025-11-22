@@ -4,46 +4,74 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SportTrack</title>
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
       :root {
-        --color-primary: #2563eb; /* Default Blue 600 */
+        --color-primary: #2563eb;
       }
     </style>
+
     <script>
       tailwind.config = {
         darkMode: 'class',
         theme: {
           extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
-            colors: {
-              primary: 'var(--color-primary)', 
-              secondary: '#0f172a', // Slate 900
-            }
+            fontFamily: { sans: ['Inter', 'sans-serif'] },
+            colors: { primary: 'var(--color-primary)', secondary: '#0f172a' }
           }
         }
       }
     </script>
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
-    "recharts": "https://aistudiocdn.com/recharts@^3.4.1",
-    "vite": "https://aistudiocdn.com/vite@^7.2.4",
-    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/"
+      }
+    }
+    </script>
+
+    <!-- O teu CSS original (se existir) -->
+    <link rel="stylesheet" href="/index.css">
+  </head>
+
   <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased transition-colors duration-300">
-    <div id="root"></div>
+
+    <!-- HEADER / MENU EXISTENTE -->
+    <header class="bg-primary text-white p-4">
+      <h1 class="text-3xl font-bold">SportTrack</h1>
+      <!-- Podes manter o menu/navegação que já tinhas -->
+    </header>
+
+    <main class="p-6">
+      <!-- SEÇÕES EXISTENTES DA PÁGINA -->
+      <section class="mb-8">
+        <h2 class="text-2xl font-semibold mb-2">Bem-vindo ao SportTrack</h2>
+        <p>Esta é a página principal com todo o layout que tinhas feito.</p>
+      </section>
+
+      <!-- INVENTORY REACT -->
+      <section class="mb-8">
+        <h2 class="text-2xl font-semibold mb-4">Inventário de Equipamentos</h2>
+        <div id="inventory-root"></div>
+      </section>
+
+      <!-- OUTRAS SEÇÕES EXISTENTES -->
+    </main>
+
+    <!-- FOOTER EXISTENTE -->
+    <footer class="bg-slate-900 text-white p-4 text-center">
+      &copy; 2025 SportTrack
+    </footer>
+
+    <!-- Firebase + React -->
+    <script type="module" src="firebase.js"></script>
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>
