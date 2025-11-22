@@ -1,0 +1,5 @@
+{
+  "name": "SportTrack",
+  "description": "Uma plataforma completa para gestão de clubes desportivos, permitindo administração de inventário, equipas e reservas de material.",
+  "requestFramePermissions": []
+}
