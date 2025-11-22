@@ -1,22 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import Inventory from "./Inventory";
 
-ReactDOM.render(<Inventory />, document.getElementById("root"));
+// Obter o root do HTML
+const rootElement = document.getElementById("root");
+if (!rootElement) throw new Error("Could not find root element to mount to");
 
-
-const rootElement = document.getElementById('root');
-if (!rootElement) {
-  throw new Error("Could not find root element to mount to");
-}
-
+// Criar root do React
 const root = ReactDOM.createRoot(rootElement);
+
+// Renderizar o componente Inventory
 root.render(
   <React.StrictMode>
-    <App />
+    <Inventory />
   </React.StrictMode>
 );
