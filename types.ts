@@ -1,6 +1,12 @@
 
 export type UserRole = 'admin' | 'coach' | 'super-admin';
 
+export interface SubscriptionData {
+  status: 'trial' | 'active' | 'expired';
+  endDate: string;
+  plan?: 'monthly' | 'yearly';
+}
+
 export interface User {
   id: string;
   name: string;
@@ -10,6 +16,7 @@ export interface User {
   password?: string; // Added for mock auth
   recoveryCode?: string; // Code/PIN used to reset password without email server
   mustChangePassword?: boolean; // Forces user to change password on next login
+  subscription?: SubscriptionData; // Added for Subscription component
 }
 
 export interface Item {
