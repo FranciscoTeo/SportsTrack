@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SportTrack</title>
 
-    <!-- Tailwind CDN (aviso apenas, não bloqueia) -->
+    <!-- Tailwind CDN (aviso de produção pode ser ignorado) -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Fontes -->
@@ -27,7 +27,7 @@
             },
             colors: {
               primary: 'var(--color-primary)',
-              secondary: '#0f172a', // Slate 900
+              secondary: '#0f172a',
             }
           }
         }
@@ -52,10 +52,10 @@
   <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased transition-colors duration-300">
     <div id="root"></div>
 
-    <!-- React App -->
-    <script type="module" src="/index.tsx"></script>
-
-    <!-- Firebase -->
+    <!-- Firebase primeiro -->
     <script type="module" src="firebase.js"></script>
+
+    <!-- React App depois -->
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
